@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Exonix</title>
+<meta name="description" content="Exonix LLC Privacy Policy. How we collect, use, and protect information across our data orchestration and performance dashboard services, WhatsApp Business integration, and Meta-connected applications." />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:       #f6f2e8;
+    --bg-2:     #ece7d8;
+    --fg:       #15120e;
+    --fg-dim:   #4d4639;
+    --fg-mute:  #8a8472;
+    --line:     #e0d9c8;
+    --line-bright:#cdc5b1;
+    --accent:   #4a1a4f;
+    --accent-soft:rgba(74,26,79,0.08);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Inter Tight',sans-serif;
+    font-weight:300;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  ::selection{background:var(--accent);color:var(--bg)}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(74,26,79,.35);transition:border-color .2s}
+  a:hover{border-bottom-color:var(--accent)}
+
+  /* ---------- Top bar (logo + page label) ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:10;
+    background:rgba(246,242,232,.92);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-bright);
+  }
+  .topbar-inner{
+    max-width:980px;
+    margin:0 auto;
+    padding:18px 56px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+  }
+  .brand{display:flex;align-items:center;gap:14px;border-bottom:none}
+  .brand:hover{border-bottom:none}
+  .brand img{height:30px;width:auto;display:block}
+  .crumb{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--fg-mute);
+    display:flex;align-items:center;gap:14px;
+  }
+  .crumb .sep{width:18px;height:1px;background:var(--line-bright)}
+  .crumb .here{color:var(--accent)}
+
+  /* ---------- Document ---------- */
+  .doc{max-width:740px;margin:0 auto;padding:80px 56px 120px}
+
+  .doc-head{margin-bottom:64px}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:24px;
+  }
+  .eyebrow::before{content:'';width:28px;height:1px;background:var(--accent);opacity:.5}
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:300;
+    font-size:clamp(40px,5.5vw,60px);
+    letter-spacing:-.025em;
+    line-height:1.05;
+    color:var(--fg);
+  }
+  h1 em{font-style:italic;color:var(--accent)}
+  .updated{
+    margin-top:22px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--fg-mute);
+  }
+  .updated b{color:var(--fg);font-weight:500}
+
+  .intro{
+    margin-top:34px;
+    font-size:17px;
+    color:var(--fg-dim);
+    line-height:1.7;
+  }
+  .intro p + p{margin-top:14px}
+
+  /* ---------- Section blocks ---------- */
+  section{margin-top:64px;scroll-margin-top:100px}
+  .sec-num{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  h2{
+    font-family:'Fraunces',serif;
+    font-weight:300;
+    font-size:28px;
+    letter-spacing:-.012em;
+    color:var(--fg);
+    margin-bottom:18px;
+    line-height:1.2;
+  }
+  h3{
+    font-family:'Inter Tight',sans-serif;
+    font-weight:500;
+    font-size:14px;
+    color:var(--fg);
+    letter-spacing:.02em;
+    margin-top:26px;
+    margin-bottom:10px;
+  }
+  section p{margin-top:14px;color:var(--fg-dim)}
+  section > p:first-of-type{margin-top:0}
+
+  ul{list-style:none;margin-top:14px}
+  li{
+    padding-left:22px;
+    position:relative;
+    margin-top:10px;
+    color:var(--fg-dim);
+  }
+  li::before{
+    content:'';
+    position:absolute;
+    left:0; top:.7em;
+    width:10px; height:1px;
+    background:var(--accent);
+  }
+  li b, li strong{color:var(--fg);font-weight:500}
+
+  /* Subtle divider between major sections */
+  hr.div{
+    border:none;
+    border-top:1px solid var(--line);
+    margin:0;
+  }
+
+  /* Contact box */
+  .contact{
+    margin-top:64px;
+    padding:32px 36px;
+    border:1px solid var(--line-bright);
+    background:var(--bg-2);
+    position:relative;
+  }
+  .contact::before{
+    content:'';
+    position:absolute; left:0; top:0;
+    width:3px; height:100%;
+    background:var(--accent);
+  }
+  .contact h2{font-size:22px;margin-bottom:10px}
+  .contact p{margin-top:6px;color:var(--fg-dim)}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line-bright);
+    background:var(--bg-2);
+  }
+  .foot-inner{
+    max-width:980px;
+    margin:0 auto;
+    padding:36px 56px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--fg-mute);
+  }
+  .foot-inner a{color:var(--fg-dim);border-bottom-color:transparent}
+  .foot-inner a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:680px){
+    .topbar-inner{padding:14px 22px}
+    .topbar-inner .crumb .sep,
+    .topbar-inner .crumb .from{display:none}
+    .doc{padding:48px 22px 80px}
+    .doc-head{margin-bottom:44px}
+    section{margin-top:48px}
+    .contact{padding:26px 22px}
+    .foot-inner{padding:28px 22px;flex-direction:column;align-items:flex-start}
+  }
+
+  @media print{
+    .topbar,footer{display:none}
+    body{background:#fff;color:#000}
+    a{color:#000;border:none}
+    .contact{background:none;border-color:#999}
+  }
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/" aria-label="Exonix home">
+      <img src="https://exonix.com/exonix-logo.png" alt="Exonix" />
+    </a>
+    <div class="crumb">
+      <span class="from">Exonix</span>
+      <span class="sep"></span>
+      <span class="here">Privacy Policy</span>
+    </div>
+  </div>
+</header>
+
+<main class="doc">
+
+  <div class="doc-head">
+    <div class="eyebrow">Legal &middot; Document 001</div>
+    <h1>Privacy <em>Policy</em></h1>
+    <div class="updated">Last Updated: <b>June 16, 2026</b></div>
+    <div class="intro">
+      <p>Exonix, LLC, provides data orchestration and performance dashboard services for Private Equity firms, Independent Sponsors, and their portfolio companies.</p>
+      <p>This Privacy Policy explains how we collect, use, and protect your information when you interact with our services, including our WhatsApp Business integration and Meta-connected applications.</p>
+    </div>
+  </div>
+
+  <section id="information-we-collect">
+    <div class="sec-num">01</div>
+    <h2>Information We Collect</h2>
+    <p>To provide our services, we collect information directly from you, automatically through our integrations, and from third-party platforms (such as Meta).</p>
+
+    <h3>Information collected via WhatsApp Business</h3>
+    <ul>
+      <li><b>Contact Information:</b> Your phone number, WhatsApp profile name, and profile picture.</li>
+      <li><b>Communications:</b> The content of the messages, inquiries, or media you send to us via our WhatsApp Business channel.</li>
+    </ul>
+
+    <h3>Information collected via Meta Platform Integrations</h3>
+    <ul>
+      <li><b>Platform Data:</b> Advertising metrics, including ad spend, campaign reach, and user engagement metrics associated with the connected Meta Business accounts.</li>
+    </ul>
+
+    <h3>Information provided by Portfolio Companies</h3>
+    <ul>
+      <li><b>Business Data:</b> Internal sales records, CRM data, and commercial health metrics provided directly by our clients.</li>
+    </ul>
+  </section>
+
+  <section id="how-we-use">
+    <div class="sec-num">02</div>
+    <h2>How We Use Your Information <span style="color:var(--fg-mute);font-size:.7em;font-style:italic;font-family:'Fraunces',serif">(Purpose of Processing)</span></h2>
+    <p>We do not sell your personal information. We process the collected data strictly for the following business purposes:</p>
+    <ul>
+      <li><b>To Provide Our Services:</b> We securely combine Meta Platform Data (such as ad spend and reach) with a company&rsquo;s internal sales records to populate our unified performance dashboard.</li>
+      <li><b>To Enable Client Decision-Making:</b> We use this aggregated data to help Private Equity firms and Independent Sponsors evaluate the commercial health of their investments and confidently allocate funding.</li>
+      <li><b>To Facilitate Communication:</b> We use your WhatsApp contact information and message content to respond to your inquiries, provide customer support, and send relevant service updates.</li>
+      <li><b>To Improve Our Products:</b> We analyze aggregated, non-personally identifiable usage data to refine our data orchestration models and improve dashboard accuracy.</li>
+    </ul>
+  </section>
+
+  <section id="information-sharing">
+    <div class="sec-num">03</div>
+    <h2>Information Sharing</h2>
+    <p>We only share the information we collect in the following limited circumstances:</p>
+    <ul>
+      <li><b>With Our Clients:</b> Data aggregated into our performance dashboards is shared with the specific Private Equity firm or Independent Sponsor that has authorized the data connection.</li>
+      <li><b>With Service Providers:</b> We may share data with trusted infrastructure providers (like cloud hosting services) necessary to operate our platform securely.</li>
+    </ul>
+  </section>
+
+  <section id="data-deletion">
+    <div class="sec-num">04</div>
+    <h2>Data Deletion and User Rights</h2>
+    <p>You have the right to request access to, correction of, or deletion of your personal data stored by Exonix and the Access JV.</p>
+    <h3>How to Request Data Deletion</h3>
+    <p>If you wish to have your WhatsApp communication history, contact information, or any other personal data removed from our systems, please submit a deletion request by:</p>
+    <ul>
+      <li>Emailing us at: <a href="mailto:support@exonix.com?subject=Data%20Deletion%20Request">support@exonix.com</a></li>
+      <li>Subject Line: <b>&ldquo;Data Deletion Request&rdquo;</b></li>
+    </ul>
+    <p>We will process your request and confirm the deletion of your data within <b>30 days</b>, subject to any legal or regulatory retention obligations.</p>
+  </section>
+
+  <section id="data-security">
+    <div class="sec-num">05</div>
+    <h2>Data Security</h2>
+    <p>We implement robust technical and organizational security measures to protect your data from unauthorized access, alteration, disclosure, or destruction. Access to Meta Platform Data and WhatsApp communications is strictly limited to authorized personnel and secure API endpoints.</p>
+  </section>
+
+  <section id="updates">
+    <div class="sec-num">06</div>
+    <h2>Updates to This Policy</h2>
+    <p>We may update this Privacy Policy periodically to reflect changes in our practices or regulatory requirements. We will post any updates on this page and revise the &ldquo;Last Updated&rdquo; date at the top.</p>
+  </section>
+
+  <div class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or our data practices, please contact us at <a href="mailto:support@exonix.com">support@exonix.com</a>.</p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>&copy; 2026 Exonix LLC &middot; All Rights Reserved</span>
+    <div class="foot-links">
+      <a href="/">Home</a>
+      <a href="/privacy-policy">Privacy</a>
+      <a href="mailto:support@exonix.com">Contact</a>
+    </div>
+    <span>From Strategic Intent to Technical Reality</span>
+  </div>
+</footer>
+
+</body>
+</html>
