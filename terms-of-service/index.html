@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Service — Exonix</title>
+<meta name="description" content="Exonix LLC Terms of Service. Conditions governing access to and use of the VCF platform, including web application, backend services, and WhatsApp integration." />
+<meta name="robots" content="index, follow" />
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=JetBrains+Mono:wght@300;400;500&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:       #f6f2e8;
+    --bg-2:     #ece7d8;
+    --fg:       #15120e;
+    --fg-dim:   #4d4639;
+    --fg-mute:  #8a8472;
+    --line:     #e0d9c8;
+    --line-bright:#cdc5b1;
+    --accent:   #4a1a4f;
+    --accent-soft:rgba(74,26,79,0.08);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--fg);
+    font-family:'Inter Tight',sans-serif;
+    font-weight:300;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  ::selection{background:var(--accent);color:var(--bg)}
+  a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(74,26,79,.35);transition:border-color .2s}
+  a:hover{border-bottom-color:var(--accent)}
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    position:sticky; top:0; z-index:10;
+    background:rgba(246,242,232,.92);
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line-bright);
+  }
+  .topbar-inner{
+    max-width:980px;
+    margin:0 auto;
+    padding:18px 56px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+  }
+  .brand{display:flex;align-items:center;gap:14px;border-bottom:none}
+  .brand:hover{border-bottom:none}
+  .brand img{height:30px;width:auto;display:block}
+  .crumb{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--fg-mute);
+    display:flex;align-items:center;gap:14px;
+  }
+  .crumb .sep{width:18px;height:1px;background:var(--line-bright)}
+  .crumb .here{color:var(--accent)}
+
+  /* ---------- Document ---------- */
+  .doc{max-width:740px;margin:0 auto;padding:80px 56px 120px}
+
+  .doc-head{margin-bottom:64px}
+  .eyebrow{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.32em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex; align-items:center; gap:14px;
+    margin-bottom:24px;
+  }
+  .eyebrow::before{content:'';width:28px;height:1px;background:var(--accent);opacity:.5}
+  h1{
+    font-family:'Fraunces',serif;
+    font-weight:300;
+    font-size:clamp(40px,5.5vw,60px);
+    letter-spacing:-.025em;
+    line-height:1.05;
+    color:var(--fg);
+  }
+  h1 em{font-style:italic;color:var(--accent)}
+  .updated{
+    margin-top:22px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--fg-mute);
+  }
+  .updated b{color:var(--fg);font-weight:500}
+
+  .intro{
+    margin-top:34px;
+    font-size:17px;
+    color:var(--fg-dim);
+    line-height:1.7;
+  }
+  .intro p + p{margin-top:14px}
+
+  /* ---------- Section blocks ---------- */
+  section{margin-top:64px;scroll-margin-top:100px}
+  .sec-num{
+    font-family:'JetBrains Mono',monospace;
+    font-size:11px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  h2{
+    font-family:'Fraunces',serif;
+    font-weight:300;
+    font-size:28px;
+    letter-spacing:-.012em;
+    color:var(--fg);
+    margin-bottom:18px;
+    line-height:1.2;
+  }
+  h3{
+    font-family:'Inter Tight',sans-serif;
+    font-weight:500;
+    font-size:14px;
+    color:var(--fg);
+    letter-spacing:.02em;
+    margin-top:26px;
+    margin-bottom:10px;
+  }
+  section p{margin-top:14px;color:var(--fg-dim)}
+  section > p:first-of-type{margin-top:0}
+
+  ul{list-style:none;margin-top:14px}
+  li{
+    padding-left:22px;
+    position:relative;
+    margin-top:10px;
+    color:var(--fg-dim);
+  }
+  li::before{
+    content:'';
+    position:absolute;
+    left:0; top:.7em;
+    width:10px; height:1px;
+    background:var(--accent);
+  }
+  li b, li strong{color:var(--fg);font-weight:500}
+
+  /* Sub-item titled blocks (used in §2 and §4) */
+  .sub{margin-top:22px}
+  .sub h3{margin-top:0;margin-bottom:6px;font-size:15px}
+  .sub p{margin-top:0;color:var(--fg-dim)}
+
+  /* Contact box */
+  .contact{
+    margin-top:64px;
+    padding:36px 38px;
+    border:1px solid var(--line-bright);
+    background:var(--bg-2);
+    position:relative;
+  }
+  .contact::before{
+    content:'';
+    position:absolute; left:0; top:0;
+    width:3px; height:100%;
+    background:var(--accent);
+  }
+  .contact .sec-num{margin-bottom:8px}
+  .contact h2{font-size:22px;margin-bottom:10px}
+  .contact .lead{color:var(--fg-dim);margin-bottom:22px}
+  .contact-details{
+    display:grid;
+    grid-template-columns:max-content 1fr;
+    gap:10px 22px;
+    font-size:15px;
+  }
+  .contact-details dt{
+    font-family:'JetBrains Mono',monospace;
+    font-size:10.5px;
+    letter-spacing:.2em;
+    text-transform:uppercase;
+    color:var(--fg-mute);
+    padding-top:4px;
+  }
+  .contact-details dd{color:var(--fg-dim)}
+  .contact-details dd b{color:var(--fg);font-weight:500;display:block;margin-bottom:2px}
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line-bright);
+    background:var(--bg-2);
+  }
+  .foot-inner{
+    max-width:980px;
+    margin:0 auto;
+    padding:36px 56px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:24px;
+    flex-wrap:wrap;
+    font-family:'JetBrains Mono',monospace;
+    font-size:10px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--fg-mute);
+  }
+  .foot-inner a{color:var(--fg-dim);border-bottom-color:transparent}
+  .foot-inner a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .foot-links{display:flex;gap:24px;flex-wrap:wrap}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:680px){
+    .topbar-inner{padding:14px 22px}
+    .topbar-inner .crumb .sep,
+    .topbar-inner .crumb .from{display:none}
+    .doc{padding:48px 22px 80px}
+    .doc-head{margin-bottom:44px}
+    section{margin-top:48px}
+    .contact{padding:28px 22px}
+    .contact-details{grid-template-columns:1fr;gap:6px 0}
+    .contact-details dt{padding-top:14px}
+    .contact-details dt:first-of-type{padding-top:0}
+    .foot-inner{padding:28px 22px;flex-direction:column;align-items:flex-start}
+  }
+
+  @media print{
+    .topbar,footer{display:none}
+    body{background:#fff;color:#000}
+    a{color:#000;border:none}
+    .contact{background:none;border-color:#999}
+  }
+</style>
+</head>
+
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="/" aria-label="Exonix home">
+      <img src="https://exonix.com/exonix-logo.png" alt="Exonix" />
+    </a>
+    <div class="crumb">
+      <span class="from">Exonix</span>
+      <span class="sep"></span>
+      <span class="here">Terms of Service</span>
+    </div>
+  </div>
+</header>
+
+<main class="doc">
+
+  <div class="doc-head">
+    <div class="eyebrow">Legal &middot; Document 002</div>
+    <h1>Terms of <em>Service</em></h1>
+    <div class="updated">Last Updated: <b>June 16, 2026</b></div>
+    <div class="intro">
+      <p>Welcome to VCF. These Terms of Service (&ldquo;Terms&rdquo;) govern your access to and use of the VCF platform, including our web application, backend services, and WhatsApp integration (collectively, the &ldquo;Service&rdquo;), provided by Exonix, LLC (&ldquo;we,&rdquo; &ldquo;us,&rdquo; or &ldquo;our&rdquo;).</p>
+      <p>By accessing or using the Service, you agree to be bound by these Terms. If you are using the Service on behalf of an organization, you are agreeing to these Terms for that organization and representing that you have the authority to bind that organization to these Terms.</p>
+    </div>
+  </div>
+
+  <section id="description-of-service">
+    <div class="sec-num">01</div>
+    <h2>Description of Service</h2>
+    <p>VCF is a private, multi-tenant B2B Software-as-a-Service (SaaS) platform that allows authorized team members to query their business&rsquo;s private pipeline and funnel data conversationally via WhatsApp. The Service provides a read-only interface to retrieve business metrics and data utilizing third-party messaging and artificial intelligence processing.</p>
+  </section>
+
+  <section id="account-provisioning">
+    <div class="sec-num">02</div>
+    <h2>Account Provisioning and Access</h2>
+    <p>Access to the Service is currently by invitation and provisioning only; it is not publicly registrable.</p>
+
+    <div class="sub">
+      <h3>Tenant Accounts</h3>
+      <p>We provision a tenant account for your organization. You are responsible for maintaining the confidentiality of your web dashboard credentials.</p>
+    </div>
+    <div class="sub">
+      <h3>WhatsApp Linking</h3>
+      <p>Authorized users may link their personal or corporate WhatsApp accounts to your VCF tenant account using a one-time link code generated within the VCF web application.</p>
+    </div>
+    <div class="sub">
+      <h3>Device Security</h3>
+      <p>You are solely responsible for securing the mobile devices and WhatsApp accounts linked to the Service. Anyone with access to a linked WhatsApp account will be able to query and view the authorized business data.</p>
+    </div>
+  </section>
+
+  <section id="acceptable-use">
+    <div class="sec-num">03</div>
+    <h2>Acceptable Use and Platform Compliance</h2>
+    <p>Because the Service operates via the WhatsApp Business Platform, your use of the Service must comply with both our rules and Meta&rsquo;s policies. You agree not to:</p>
+    <ul>
+      <li>Use the Service for any unlawful, abusive, or fraudulent purposes.</li>
+      <li>Submit queries that contain sensitive personal information, protected health information (PHI), or payment card industry (PCI) data.</li>
+      <li>Attempt to bypass, exploit, or reverse-engineer the read-only limitations of the conversational interface or the backend platform.</li>
+      <li>Violate the WhatsApp Business Terms of Service or the WhatsApp Commerce Policy.</li>
+    </ul>
+    <p>We reserve the right to immediately suspend or terminate your linked WhatsApp number or entire tenant account if we detect abusive behavior or a violation of these Terms.</p>
+  </section>
+
+  <section id="third-party-services">
+    <div class="sec-num">04</div>
+    <h2>Third-Party Services and Data Processing</h2>
+    <p>The Service relies on third-party infrastructure to function:</p>
+
+    <div class="sub">
+      <h3>Meta / WhatsApp</h3>
+      <p>Inbound messages and outbound replies are routed through the WhatsApp Business Platform.</p>
+    </div>
+    <div class="sub">
+      <h3>AI Processing</h3>
+      <p>To understand your conversational queries and generate accurate responses, the text content of your WhatsApp messages is processed by third-party Large Language Models (such as Anthropic).</p>
+    </div>
+
+    <p>By using the Service, you acknowledge that your text queries and the resulting data responses will be transmitted through these third-party processors. Please review our <a href="/privacy-policy">Privacy Policy</a> for detailed information on how data is handled, stored, and protected.</p>
+  </section>
+
+  <section id="intellectual-property">
+    <div class="sec-num">05</div>
+    <h2>Intellectual Property</h2>
+    <p>All intellectual property rights in the Service&mdash;including the software, web dashboard, conversational routing logic, and brand identity&mdash;are owned by Exonix, LLC. You are granted a limited, non-exclusive, non-transferable license to use the Service for your internal business purposes during your active subscription or proof-of-concept period.</p>
+  </section>
+
+  <section id="disclaimer">
+    <div class="sec-num">06</div>
+    <h2>Disclaimer of Warranties</h2>
+    <p>The Service is provided on an &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE&rdquo; basis. As the Service is currently offered as a private proof-of-concept, we make no warranties, express or implied, regarding its absolute reliability, uptime, or fitness for a particular purpose. We do not guarantee that the Service will be uninterrupted or error-free.</p>
+  </section>
+
+  <section id="limitation-of-liability">
+    <div class="sec-num">07</div>
+    <h2>Limitation of Liability</h2>
+    <p>To the maximum extent permitted by law, Exonix, LLC shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or business opportunities, arising out of or related to your use of the Service.</p>
+  </section>
+
+  <section id="termination">
+    <div class="sec-num">08</div>
+    <h2>Termination</h2>
+    <p>We reserve the right to modify, suspend, or terminate your access to the Service at any time, with or without notice, for conduct that we believe violates these Terms, Meta&rsquo;s policies, or is harmful to other users of the Service, us, or third parties.</p>
+  </section>
+
+  <section id="governing-law">
+    <div class="sec-num">09</div>
+    <h2>Governing Law</h2>
+    <p>These Terms shall be governed by and construed in accordance with the laws of the State of Virginia, without regard to its conflict of law provisions.</p>
+  </section>
+
+  <div class="contact" id="contact">
+    <div class="sec-num">10</div>
+    <h2>Contact Us</h2>
+    <p class="lead">If you have any questions about these Terms, please contact us at:</p>
+    <dl class="contact-details">
+      <dt>Entity</dt>
+      <dd><b>Exonix, LLC</b></dd>
+
+      <dt>Address</dt>
+      <dd>
+        PO Box 73654<br>
+        36 Westmoreland Dr<br>
+        Sterling, VA 20165<br>
+        United States
+      </dd>
+
+      <dt>Email</dt>
+      <dd><a href="mailto:support@exonix.com">support@exonix.com</a></dd>
+
+      <dt>Phone</dt>
+      <dd><a href="tel:+12408127613">(240) 812-7613</a></dd>
+    </dl>
+  </div>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <span>&copy; 2026 Exonix LLC &middot; All Rights Reserved</span>
+    <div class="foot-links">
+      <a href="/">Home</a>
+      <a href="/privacy-policy">Privacy</a>
+      <a href="/terms-of-service">Terms</a>
+      <a href="mailto:support@exonix.com">Contact</a>
+    </div>
+    <span>From Strategic Intent to Technical Reality</span>
+  </div>
+</footer>
+
+</body>
+</html>
